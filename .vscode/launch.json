@@ -1,0 +1,16 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"address": "127.0.0.1",
+			"localRoot": "${workspaceFolder}",
+			"name": "js-node-web-backend-template",
+			"port": 9229,
+			"remoteRoot": "/usr/src/app",
+			"request": "attach",
+			"skipFiles": [
+			],
+			"type": "node"
+		},
+	]
+}
