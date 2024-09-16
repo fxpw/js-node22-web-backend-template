@@ -10,10 +10,10 @@ app.use(express.json());
 app.get('/api', (req, res) => {
 	if (process.env.NODE_ENV === 'prod') {
 		// Запуск в продакшн режиме
-		res.send({ message: 'Hello from the prod-server!' });
+		res.send({ message: 'Hello from the js-prod-server!' });
 	} else {
 		// Запуск в режиме разработки
-		res.send({ message: 'Hello from the test-server!' });
+		res.send({ message: 'Hello from the js-test-server!' });
 	}
 });
 
