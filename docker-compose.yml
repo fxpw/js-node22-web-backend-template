@@ -28,8 +28,8 @@ services:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
     ports:
-      - "5000:5000"
-      - "9229:9229"
+      - '${BACKEND_PORT:-5000}:5000'
+      - '${DEBUG_BACKEND_PORT:-9229}:9229'
     environment:
       - NODE_ENV=${APP_ENV}
 
