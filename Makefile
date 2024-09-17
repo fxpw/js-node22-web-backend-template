@@ -57,7 +57,7 @@ d_check_db_connection:
     echo "Checking MySQL connection...";\
     COUNTER=0; \
     while [ "$$COUNTER" -lt 10 ]; do \
-        HEALTH_STATUS=$$(docker inspect -f '{{.State.Health.Status}}' mysql-backend-template-db); \
+        HEALTH_STATUS=$$(docker inspect -f '{{.State.Health.Status}}' mysql_backend_template_db); \
         if [ "$$HEALTH_STATUS" = "healthy" ]; then \
             echo "Container is healthy!"; \
             exit 0; \
