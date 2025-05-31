@@ -1,30 +1,41 @@
-require('dotenv').config(); // подключаем dotenv для использования переменных окружения
-console.log(process.env.DB_USERNAME,
-	process.env.DB_PASSWORD,
-	process.env.DB_DATABASE,)
-module.exports = {
+require('dotenv').config();
+let config = {
 	development: {
+		dialect: process.env.DB_DIALECT,
+		host: process.env.DB_HOST,
+		port: process.env.DB_PORT,
+		database: process.env.DB_DATABASE,
 		username: process.env.DB_USERNAME,
 		password: process.env.DB_PASSWORD,
-		database: process.env.DB_DATABASE,
-		host: '127.0.0.1',
-		port:process.env.DB_PORT,
-		dialect: 'mysql'
+		logging: console.log,
+		dialectOptions: {
+			bigNumberStrings: true,
+		},
 	},
 	test: {
+		dialect: process.env.DB_DIALECT,
+		host: process.env.DB_HOST,
+		port: process.env.DB_PORT,
+		database: process.env.DB_DATABASE,
 		username: process.env.DB_USERNAME,
 		password: process.env.DB_PASSWORD,
-		database: process.env.DB_DATABASE,
-		host: '127.0.0.1',
-		port:process.env.DB_PORT,
-		dialect: 'mysql'
+		logging: console.log,
+		dialectOptions: {
+			bigNumberStrings: true,
+		},
 	},
 	production: {
+		dialect: process.env.DB_DIALECT,
+		host: process.env.DB_HOST,
+		port: process.env.DB_PORT,
+		database: process.env.DB_DATABASE,
 		username: process.env.DB_USERNAME,
 		password: process.env.DB_PASSWORD,
-		database: process.env.DB_DATABASE,
-		host: '127.0.0.1',
-		port:process.env.DB_PORT,
-		dialect: 'mysql'
+		logging: console.log,
+		dialectOptions: {
+			bigNumberStrings: true,
+		},
 	}
-};
+}
+// console.log(config);
+module.exports = config;

@@ -7,22 +7,19 @@ module.exports = {
 		await queryInterface.bulkInsert('users', [
 			{
 				username: 'john_doe',
-				subscriptionEnd: new Date('2023-12-31'),
-				extraInfo: null,
+				email: 'test1@test.test',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
 			{
 				username: 'jane_dd',
-				subscriptionEnd: new Date('2024-01-15'),
-				extraInfo: null,
+				email: 'test2@test.test',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
 			{
 				username: 'alice_smith',
-				subscriptionEnd: null,
-				extraInfo: JSON.stringify({ age: 25, country: 'USA' }),
+				email: 'test3@test.test',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			}

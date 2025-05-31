@@ -1,0 +1,7 @@
+#!/bin/bash
+npm install
+if [ "$NODE_ENV" = 'production' ]; then
+	node ./src/app.js
+else
+	npx nodemon --inspect=0.0.0.0:9229 ./src/app.js
+fi
